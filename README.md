@@ -1,4 +1,4 @@
-# Kangxi-Shilu-Crisis-Predictor
+# Kangxi crisis data mining
 This study applies data science to the Veritable Records of Kangxi to predict historical crises. Using N-gram tokenization and Lasso-regularized Logistic Regression, it identifies linguistic predictors of documented conflicts. This research validates quantitative text mining as a tool for empirical Digital Humanities analysis.
 
 ## 🛠 Technical Implementation

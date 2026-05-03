@@ -151,6 +151,7 @@ To test whether results depend on the exact crisis-year labeling, crisis-onset y
 │   └── processed/                                # Yearly frequency matrix
 ├── assets/                                       # Figures and infographics
 ├── LICENSE
+├── requirements.txt
 └── README.md
 ```
 

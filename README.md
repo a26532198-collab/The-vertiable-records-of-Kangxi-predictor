@@ -18,8 +18,6 @@ An infographic of Model 1 analysis result.
 
 > A digital humanities study testing whether classical Chinese word frequency patterns in the Qing Shilu (1661–1722) can identify and predict periods of national crisis during the Kangxi Emperor's reign.
 
-![Model 1 Result Infographic](assets/model1_infographic.png)
-
 ---
 
 ## Abstract

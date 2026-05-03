@@ -16,3 +16,11 @@ An infographic of Model 1 analysis result.
 - Code: [MIT License](LICENSE)
 - Data: The raw data is sourced from the [National Institute of Korean History](http://db.history.go.kr/).
 - Analysis Content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+## Citation
+
+If you use this code or data in your research, please cite:
+
+[김형민] (2026). 청성조실록 한문 로지스틱회귀 분석.
+[https://github.com/a26532198-collab/The-vertiable-records-of-Kangxi-predictor]
+

@@ -139,18 +139,17 @@ To test whether results depend on the exact crisis-year labeling, crisis-onset y
 .
 ├── 실록 한문 빈도수 분석을 통한 위기 예측.docx    # Full paper (Korean, .docx)
 ├── mining/                                       # Analysis notebooks
-│   ├── 01_preprocessing.ipynb
-│   ├── 02_data_modeling.ipynb
-│   └── 03_compensate.ipynb
+│   ├── 01_preprocessing/
+│   ├── 02_data_modeling/
+│   └── 03_compensate/
 ├── crawler/
 │   └── scrapper/                                 # Web scraper for Qing Shilu DB
-│       └── (.py files)
+│       └── (.py & .json files)
 ├── data/
 │   ├── raw/
 │   │   └── 1661 - 1722/                          # Raw monthly CSVs (gitignored)
 │   └── processed/                                # Yearly frequency matrix
 ├── assets/                                       # Figures and infographics
-├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
@@ -203,5 +202,6 @@ If you use this code or data in your research, please cite:
   url    = {https://github.com/a26532198-collab/The-vertiable-records-of-Kangxi-predictor}
 }
 
+```
 
-Thank you for reading.
+**Thank you for reading.**

@@ -99,7 +99,7 @@ All models use **L2-regularized Logistic Regression** and **L1-regularized Lasso
 | AUC-ROC | **0.989** | 0.729 | 0.742 |
 | F1-score | **0.906** | 0.655 | 0.655 |
 
-📊 [Figure 1 — Model comparison](assets/fig1_model_comparison.png)
+📊 [Figure 1 — Model comparison](assets/kangxi_light_model1.png)
 
 The result is striking: a simple correlation-based feature selection (Model 1) substantially outperforms PCA-based latent-structure models. This suggests that crisis signals in the Shilu are concentrated in a **small set of direct lexical markers**, not diffused across the full vocabulary distribution.
 
@@ -110,7 +110,7 @@ The result is striking: a simple correlation-based feature selection (Model 1) s
 | Positive (crisis) | 人心 · 達賴 · 殺 · 翰林院 · 鼓舞 · 休允 | Popular sentiment, Tibetan affairs, punitive violence, mobilization |
 | Negative (stability) | 還宮 · 應行 · 百姓 · 城隍 | Imperial return, routine administration, civilian governance |
 
-📊 [Figure 2 — Keyword contributions](assets/fig2_keyword_contribution.png)
+📊 [Figure 2 — Keyword contributions](assets/model1_coef.png)
 
 These terms align with documented historical patterns: `人心` (popular sentiment) tracks legitimacy crises during the Three Feudatories Revolt; `達賴` (Dalai) marks late-Kangxi Tibetan campaigns; `殺` (kill) indexes punitive military mobilization; `還宮` (return to palace) inversely signals the closure of imperial expeditions and the resumption of routine governance. The model thus does not merely classify — it surfaces the **administrative-political vocabulary** through which the Qing court textually marked crisis itself.
 
@@ -123,13 +123,13 @@ This drop is reported transparently rather than concealed. Two facts mitigate bu
 1. **Feature stability**: Mean Jaccard similarity of Top-50 word sets across folds = **0.743**. Core terms (`一千`, `遣`, `進發`, `軍務`, `赴`, `遵行`, `曾經`) appear in *every* fold. The signal is not a one-fold artifact.
 2. **Mid-reign concentration**: The drop is driven primarily by transition years at the edges of the reign (early regency, late succession crisis). Middle-period crises remain well-identified.
 
-📊 [Figure 3 — Nested CV comparison](assets/fig3_nested_cv.png)
+📊 [Figure 3 — Nested CV comparison](assets/kangxi_model1_nested_loocv_comparison.png)
 
 ### Sensitivity Analysis: Crisis Boundary Shifts
 
 To test whether results depend on the exact crisis-year labeling, crisis-onset years were shifted by ±2 years while end-years were held fixed. Model 1 AUC remained between **0.929 and 1.000** across all shift conditions, confirming that the predictive signal does not hinge on a particular labeling decision. PCA-based models showed larger fluctuations, consistent with their reliance on diffuse latent structure rather than concrete lexical markers.
 
-📊 [Figure 4 — Sensitivity analysis](assets/fig4_sensitivity.png)
+📊 [Figure 4 — Sensitivity analysis](assets/kangxi_onset_sensitivity_auc.png)
 
 ---
 
@@ -153,28 +153,38 @@ jupyter notebook mining/
 
 Raw data is collected directly from the National Institute of Korean History (not redistributed here due to source licensing). The crawler_scrapper/ directory contains the scraper used; expect ~759 monthly files.
 
-## **Limitations**
+# Limitations
 This is a first-pass exploration, not a finalized claim:
 Coarse temporal resolution. Yearly aggregation smooths out month-to-month crisis dynamics. Future work should test monthly or quarterly granularity.
 p ≫ n problem. With 2,695 features against 62 samples, overfitting risk is structural, not avoidable. Mitigations (rare-word removal, Top-K selection, PCA, LOO-CV, nested CV) reduce but cannot eliminate it. Expanding to other reigns (Yongzheng, Qianlong) is the natural next step for sample augmentation.
 Quantitative findings need qualitative re-reading. Statistical association between a term and crisis labels does not equal historical meaning. Each surfaced keyword should be checked against the original Shilu entries it appears in.
 Numeric tokens (二十一, 三十九) appear in the Top-50 but resist clean historical interpretation; they may reflect troop counts, dates, or document conventions rather than crisis content. These were retained statistically but excluded from the historical reading.
 
-## **Related Work**
+# Related Work
 A complementary unsupervised analysis on the same dataset — FP-Growth association rule mining for monthly co-occurrence patterns — is maintained in a separate repository:
 🔗 Kangxi-MBA-Association-Rule-Mining
 
 Where this study asks "can a model predict crisis years?", the sister project asks "which classical Chinese terms tend to co-occur within a month?" — supervised prediction and unsupervised pattern discovery applied to identical source data.
 
-## **License**
+# License
 - Code: [MIT License](LICENSE)
 - Data: The raw data is sourced from the [National Institute of Korean History](http://db.history.go.kr/).
 - Analysis Content: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-## Citation
+# Citation
 
 If you use this code or data in your research, please cite:
 
 [김형민] (2026). 청성조실록 한문 로지스틱회귀 분석.
 [https://github.com/a26532198-collab/The-vertiable-records-of-Kangxi-predictor]
 
+@misc{kim2026kangxi,
+  author = {Kim, Hyungmin},
+  title  = {Crisis Prediction from the Veritable Records of Kangxi:
+            A Word Frequency Analysis},
+  year   = {2026},
+  url    = {https://github.com/a26532198-collab/The-vertiable-records-of-Kangxi-predictor}
+}
+
+
+Thank you for reading.

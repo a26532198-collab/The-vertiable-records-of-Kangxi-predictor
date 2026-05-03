@@ -135,8 +135,25 @@ To test whether results depend on the exact crisis-year labeling, crisis-onset y
 
 ## Repository Structure
 
-. ├── docx/ # Full paper (Korean, .docx) ├── mining/ # Analysis notebooks │ ├── 01_preprocessing.ipynb │ ├── 02_data_modeling.ipynb │ └── 03_compensate.ipynb # Nested CV + sensitivity analysis ├── crawler_scrapper/ # Web scraper for Qing Shilu DB ├── data/ │ ├── raw/ │ │ └── 1661 - 1722/ # Raw monthly CSVs (gitignored) │ └── processed/ # Yearly frequency matrix ├── assets/ # Figures and infographics ├── requirements.txt ├── LICENSE └── README.md
-
+```
+.
+├── 실록 한문 빈도수 분석을 통한 위기 예측.docx    # Full paper (Korean, .docx)
+├── mining/                                       # Analysis notebooks
+│   ├── 01_preprocessing.ipynb
+│   ├── 02_data_modeling.ipynb
+│   └── 03_compensate.ipynb
+├── crawler/
+│   └── scrapper/                                 # Web scraper for Qing Shilu DB
+│       └── (.py files)
+├── data/
+│   ├── raw/
+│   │   └── 1661 - 1722/                          # Raw monthly CSVs (gitignored)
+│   └── processed/                                # Yearly frequency matrix
+├── assets/                                       # Figures and infographics
+├── requirements.txt
+├── LICENSE
+└── README.md
+```
 
 ---
 

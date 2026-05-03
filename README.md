@@ -8,7 +8,8 @@
 
 ---
 
-## License<img width="3367" height="3183" alt="kangxi_light_model1" src="https://github.com/user-attachments/assets/060cd404-8d69-4296-ac4f-7e5123f33dd9" />
+## Data Visualization
+<img width="3367" height="3183" alt="kangxi_light_model1" src="https://github.com/user-attachments/assets/060cd404-8d69-4296-ac4f-7e5123f33dd9" />
 An infographic of Model 1 analysis result.
 
 ---
